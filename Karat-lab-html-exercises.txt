@@ -1,6 +1,14 @@
 products = ["t-shirt", "mug", "hat", "book", "keychain"]
 
-inventory = {}
+inventory = {
+    "t-shirt" : 5,
+    "mug" : 10,
+    "hat" : 20,
+    "book" : 15,
+    "keychain" : 30
+}
+
+customer_orders = set()
 
 products.append(inventory)
 
@@ -8,7 +16,6 @@ for product in products:
     quantity = int(input(f"Enter the quantity of {product}: "))
     inventory[product] = int(quantity)
 
-customer_orders = set()
 
 while len(customer_orders) < 3:
     product = input("Enter a product to order (t-shirt, mug, hat, book, keychain): ").lower()
